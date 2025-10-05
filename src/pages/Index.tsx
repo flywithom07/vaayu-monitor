@@ -2,6 +2,8 @@ import Navbar from "@/components/Navbar";
 import KPICard from "@/components/KPICard";
 import NetworkMap from "@/components/NetworkMap";
 import AirQualityTrends from "@/components/AirQualityTrends";
+import AnalyticsSection from "@/components/AnalyticsSection";
+import ReportsSection from "@/components/ReportsSection";
 import { Wind, Activity, MapPin, AlertTriangle } from "lucide-react";
 
 const Index = () => {
@@ -11,7 +13,7 @@ const Index = () => {
       
       <main className="container mx-auto px-4 pt-24 pb-12">
         {/* Header */}
-        <div className="mb-8">
+        <div className="mb-8" id="overview">
           <h1 className="text-4xl font-bold text-foreground mb-2">
             National Air Quality Dashboard
           </h1>
@@ -55,14 +57,32 @@ const Index = () => {
           />
         </div>
 
-        {/* Map Section */}
-        <div className="mb-8">
+        {/* Network Section */}
+        <div className="mb-12" id="network">
           <NetworkMap />
         </div>
 
         {/* Trends Section */}
-        <div>
+        <div className="mb-12">
           <AirQualityTrends />
+        </div>
+
+        {/* Analytics Section */}
+        <div className="mb-12" id="analytics">
+          <div className="mb-6">
+            <h2 className="text-2xl font-bold text-foreground mb-2">Analytics & Insights</h2>
+            <p className="text-muted-foreground">Source attribution and environmental impact analysis</p>
+          </div>
+          <AnalyticsSection />
+        </div>
+
+        {/* Reports Section */}
+        <div id="reports">
+          <div className="mb-6">
+            <h2 className="text-2xl font-bold text-foreground mb-2">Reports & Compliance</h2>
+            <p className="text-muted-foreground">NCAP reporting and public communication</p>
+          </div>
+          <ReportsSection />
         </div>
       </main>
     </div>

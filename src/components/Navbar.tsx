@@ -19,16 +19,44 @@ const Navbar = () => {
           </div>
           
           <div className="hidden md:flex items-center gap-6">
-            <a href="#overview" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+            <a 
+              href="#overview" 
+              className="text-sm font-medium text-foreground hover:text-primary transition-colors cursor-pointer"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('overview')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               Overview
             </a>
-            <a href="#network" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+            <a 
+              href="#network" 
+              className="text-sm font-medium text-foreground hover:text-primary transition-colors cursor-pointer"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('network')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               Network
             </a>
-            <a href="#analytics" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+            <a 
+              href="#analytics" 
+              className="text-sm font-medium text-foreground hover:text-primary transition-colors cursor-pointer"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('analytics')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               Analytics
             </a>
-            <a href="#reports" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+            <a 
+              href="#reports" 
+              className="text-sm font-medium text-foreground hover:text-primary transition-colors cursor-pointer"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('reports')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               Reports
             </a>
           </div>
