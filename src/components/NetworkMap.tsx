@@ -1,18 +1,31 @@
 import { Card } from "@/components/ui/card";
 import AQIBadge from "./AQIBadge";
 import { Activity, MapPin } from "lucide-react";
+import { unitsData } from "@/data/mockData";
 
-// Mock data for demonstration
-const mockUnits = [
-  { id: 1, city: "Delhi", aqi: 285, status: "online", units: 1247 },
-  { id: 2, city: "Mumbai", aqi: 145, status: "online", units: 892 },
-  { id: 3, city: "Bangalore", aqi: 92, status: "online", units: 645 },
-  { id: 4, city: "Kolkata", aqi: 198, status: "online", units: 734 },
-  { id: 5, city: "Chennai", aqi: 76, status: "online", units: 523 },
-  { id: 6, city: "Hyderabad", aqi: 118, status: "online", units: 587 },
-  { id: 7, city: "Pune", aqi: 132, status: "online", units: 412 },
-  { id: 8, city: "Ahmedabad", aqi: 165, status: "online", units: 498 },
-];
+// Group units by city
+const cityGroups = Object.values(unitsData).reduce((acc, unit) => {
+  if (!acc[unit.city]) {
+    acc[unit.city] = [];
+  }
+  acc[unit.city].push(unit);
+  return acc;
+}, {} as Record<string, typeof unitsData[keyof typeof unitsData][]>);
+
+const mockUnits = Object.entries(cityGroups).map(([city, units]) => {
+  const avgAqi = Math.round(units.reduce((sum, u) => sum + u.aqi, 0) / units.length);
+  const hasOffline = units.some(u => u.status === "Offline");
+  const hasMaintenance = units.some(u => u.status === "Maintenance");
+  const status = hasOffline ? "offline" : hasMaintenance ? "maintenance" : "online";
+  
+  return {
+    id: city,
+    city,
+    aqi: avgAqi,
+    status,
+    units: units.length
+  };
+});
 
 const getAQIColor = (aqi: number) => {
   if (aqi <= 50) return "bg-aqi-good";

@@ -15,13 +15,13 @@ const AirQualityTrends = () => {
   return (
     <Card className="p-6 border-border/50">
       <div className="flex items-center justify-between mb-6">
-        <div>
-          <div className="flex items-center gap-2">
-            <TrendingDown className="w-5 h-5 text-primary" />
-            <h3 className="font-semibold text-foreground">National Air Quality Trends</h3>
+          <div>
+            <div className="flex items-center gap-2">
+              <TrendingDown className="w-5 h-5 text-primary" />
+              <h3 className="font-semibold text-foreground">Delhi-NCR Air Quality Trends</h3>
+            </div>
+            <p className="text-sm text-muted-foreground mt-1">6-month average pollutant levels (PM2.5)</p>
           </div>
-          <p className="text-sm text-muted-foreground mt-1">6-month average pollutant levels</p>
-        </div>
       </div>
 
       <ResponsiveContainer width="100%" height={350}>
