@@ -14,10 +14,16 @@ const Dashboard = () => {
 
   return (
     <div className="p-8">
+      <div className="flex items-center justify-center gap-3 mb-6">
+        <div className="bg-primary p-3 rounded-lg">
+          <Wind className="w-8 h-8 text-primary-foreground" />
+        </div>
+        <h1 className="text-4xl font-bold text-foreground">Shuddh Vaayu</h1>
+      </div>
       <header className="mb-8 text-center">
-        <h1 className="text-4xl font-bold text-foreground mb-2">
+        <h2 className="text-3xl font-bold text-foreground mb-2">
           Delhi-NCR Dashboard
-        </h1>
+        </h2>
         <p className="text-lg text-muted-foreground">
           Real-time monitoring of India's Shuddh Vaayu purification network across Delhi-NCR
         </p>

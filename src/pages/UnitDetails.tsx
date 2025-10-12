@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Card } from "@/components/ui/card";
 import AQIBadge from "@/components/AQIBadge";
 import { unitsData } from "@/data/mockData";
+import { MapPin } from "lucide-react";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
 
 const UnitDetails = () => {
@@ -26,8 +27,14 @@ const UnitDetails = () => {
 
   return (
     <div className="p-8">
+      <div className="flex items-center justify-center gap-3 mb-6">
+        <div className="bg-primary p-3 rounded-lg">
+          <MapPin className="w-8 h-8 text-primary-foreground" />
+        </div>
+        <h1 className="text-4xl font-bold text-foreground">Shuddh Vaayu</h1>
+      </div>
       <header className="mb-8 text-center">
-        <h1 className="text-4xl font-bold text-foreground mb-2">Unit-Level Drilldown</h1>
+        <h2 className="text-3xl font-bold text-foreground mb-2">Unit-Level Drilldown</h2>
         <p className="text-lg text-muted-foreground">
           Granular data for each unit within the Delhi-NCR network
         </p>

@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { BarChart3 } from "lucide-react";
+import { BarChart3, Wind } from "lucide-react";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
 import { generateTrendData } from "@/data/mockData";
 
@@ -17,10 +17,16 @@ const Analytics = () => {
 
   return (
     <div className="p-8">
+      <div className="flex items-center justify-center gap-3 mb-6">
+        <div className="bg-primary p-3 rounded-lg">
+          <Wind className="w-8 h-8 text-primary-foreground" />
+        </div>
+        <h1 className="text-4xl font-bold text-foreground">Shuddh Vaayu</h1>
+      </div>
       <header className="mb-8 text-center">
-        <h1 className="text-4xl font-bold text-foreground mb-2">
+        <h2 className="text-3xl font-bold text-foreground mb-2">
           Analytics & Source Apportionment
-        </h1>
+        </h2>
         <p className="text-lg text-muted-foreground">
           Transform raw data into actionable intelligence for policy and planning
         </p>
