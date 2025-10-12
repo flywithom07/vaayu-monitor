@@ -14,7 +14,7 @@ const Dashboard = () => {
 
   return (
     <div className="p-8">
-      <header className="mb-8">
+      <header className="mb-8 text-center">
         <h1 className="text-4xl font-bold text-foreground mb-2">
           Delhi-NCR Dashboard
         </h1>

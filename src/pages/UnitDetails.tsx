@@ -26,7 +26,7 @@ const UnitDetails = () => {
 
   return (
     <div className="p-8">
-      <header className="mb-8">
+      <header className="mb-8 text-center">
         <h1 className="text-4xl font-bold text-foreground mb-2">Unit-Level Drilldown</h1>
         <p className="text-lg text-muted-foreground">
           Granular data for each unit within the Delhi-NCR network
