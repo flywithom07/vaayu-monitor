@@ -20,13 +20,13 @@ const Sidebar = () => {
   return (
     <aside className="w-64 bg-card border-r border-border flex-shrink-0 flex flex-col justify-between">
       <div className="p-4">
-        <div className="flex items-center gap-3 px-2 mb-8">
+        <div className="flex flex-col items-center justify-center gap-3 px-2 mb-8">
           <div className="bg-primary p-2 rounded-lg">
             <svg className="w-6 h-6 text-primary-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
             </svg>
           </div>
-          <h1 className="text-xl font-bold text-foreground">Shuddh Vaayu</h1>
+          <h1 className="text-xl font-bold text-foreground text-center">Shuddh Vaayu</h1>
         </div>
         
         <nav className="space-y-1">
