@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { FileText, Download, Calendar, Wind } from "lucide-react";
+import { FileText, Download, Calendar } from "lucide-react";
 
 const Reports = () => {
   const reports = [
@@ -44,16 +44,10 @@ const Reports = () => {
 
   return (
     <div className="p-8">
-      <div className="flex items-center justify-center gap-3 mb-6">
-        <div className="bg-primary p-3 rounded-lg">
-          <Wind className="w-8 h-8 text-primary-foreground" />
-        </div>
-        <h1 className="text-4xl font-bold text-foreground">Shuddh Vaayu</h1>
-      </div>
-      <header className="mb-8 text-center">
-        <h2 className="text-3xl font-bold text-foreground mb-2">
+      <header className="mb-8">
+        <h1 className="text-4xl font-bold text-foreground mb-2">
           Reporting & Communication
-        </h2>
+        </h1>
         <p className="text-lg text-muted-foreground">
           Tools for compliance, transparency, and public engagement
         </p>
