@@ -179,6 +179,25 @@ export const unitsData: Record<string, UnitData> = {
     filterOut: 10,
     batteryLevel: 87,
     powerSource: "Grid"
+  },
+  "SV-DEL-005": {
+    id: "SV-DEL-005",
+    location: "Hauz Khas",
+    city: "New Delhi",
+    aqi: 220,
+    pm25: 95,
+    pm10: 220,
+    status: "Online",
+    lastSync: "1m ago",
+    co: 1.9,
+    nox: 42,
+    sox: 11,
+    temp: 27,
+    humidity: 62,
+    filterIn: 95,
+    filterOut: 8,
+    batteryLevel: 94,
+    powerSource: "Solar"
   }
 };
 
